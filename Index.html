@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>Registration Form</title>
+    </head>
+    <style>
+        p{
+            display:none;
+        }
+        input[name="name"]:hover+p{
+           display:inline;
+           background-color: red;
+
+        }
+        input[name="pmail"]:hover+p{
+           display:inline;
+           background-color: red;
+
+        }
+        input[name="pwd"]:hover+p{
+           display:inline;
+           background-color: red;
+
+        }
+        input[type="radio"]:checked{
+            width:15px;
+            height:15px;
+
+        }
+        input[type="radio"]:checked+label{
+          color:red;
+        }
+        input[required]{
+            border:2px solid violet;
+        }
+        input[required]:focus{
+            background-color: yellow;
+        }
+        img{
+            display: none;
+        }
+        input[name="pmail"]:valid~img.valid{
+           display:inline;
+        }
+        input[name="pmail"]:invalid~img.invalid{
+            display:inline;
+        }
+        form{
+            border:2px solid black;
+        }
+        body{
+            font-family: cursive;
+        }
+    </style>
+
+    <body>
+        <h1>Sign Up Form</h1>
+        <form action="#"> <br>
+            <table>
+                <tr>
+                    <td><label>Name</label></td>
+                    <td> <input type="text" name="name" size="25" required>
+                        <p>Enter your name</p><br></td>
+                    
+                </tr>
+                <tr>
+                    <td><label>College</label></td>
+                    <td> <input type="text" name="college" size="25" disabled><br></td>
+                </tr>
+                <tr>
+                    <td><label>Primary Email</label></td>
+                    <td><input type="email" name="pmail" size="25" required>
+                        <p>Enter your email</p>
+                        <img src="correct.png" width="20px" height="20px" class="valid">
+                        <img src="warning.png" width="20px" height="20px" class="invalid"><br></td>
+                </tr>
+                <tr>
+                    <td><label>Secondary Email</label></td>
+                    <td><input type="email" name="smail"  size="25"><br></td>
+                </tr>
+                <tr>
+                    <td><label>Password</label></td>
+                    <td> <input type="password" name="pwd" size="25" required>
+                        <p>Enter your password</p><br></td>
+                </tr>
+               <tr>
+                <td> <label>Gender</label></td>
+                <td> <input type="radio" name="gen" value="male">
+                    <label>Male</label>
+                    <input type="radio" name="gen" value="female">
+                    <label>Female</label>
+                    <input type="radio" name="gen" value="other"> 
+                    <label>Other</label><br></td>
+               </tr>
+               <tr>
+                <td> <label>Age</label></td>
+                <td>
+                    <input type="number" name="age" size="25" min="18" max="100"><br>
+                </td>
+               </tr>
+               <tr>
+                <td> <label>MOD</label></td>
+                <td><input type="text" name="mod" size="25" value="online" disabled><br></td>
+               </tr>
+               <tr>
+                <td> <input type="submit"></td>
+               </tr>
+                </table>
+        </form>
+    </body>
+</html>
